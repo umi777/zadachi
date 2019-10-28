@@ -112,11 +112,14 @@
 <?php if ($auth) { ?>
     <p>Вы вошли, как <?=$login?>!</p>
 <form id="edit" action="" method="POST">
-    <div>
-        <input placeholder="№ п/п:" type="text" name="id" required />
-        <textarea  placeholder="Текст задачи" type="text" name="text" required /></textarea >
-		<input type="submit" name="send" value="Отправить"/>
-    </div>
+    <fieldset>
+	<legend>Изменить задачу</legend>
+		<div>
+			<input placeholder="№ п/п:" type="text" name="id" required />
+			<textarea  placeholder="Текст задачи" type="text" name="text" required /></textarea >
+			<input type="submit" name="send" value="Отправить"/>
+		</div>
+    </fieldset>
 </form>	
     <a href='index.php?f=logout'>Выход</a>
 <?php } else { ?>
